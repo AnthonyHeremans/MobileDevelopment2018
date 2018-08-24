@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateEvent.CreateEventFragment">
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#d3d3d3"
+        android:orientation="vertical"
+        android:weightSum="1"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:layout_marginTop="50dp"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:padding="30px">
+
+            <TextView
+                android:id="@+id/LblCNameEvent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:text="@string/CNameEvent" />
+
+            <EditText
+                android:id="@+id/TxtCNameEvent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.41"
+                android:ems="10"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:layout_marginTop="50dp"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:padding="30px">
+
+            <TextView
+                android:id="@+id/LblCAdress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:text="@string/CAddress" />
+
+            <EditText
+                android:id="@+id/TxtAdress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.41"
+                android:ems="10"
+                android:inputType="text" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:layout_marginTop="50dp"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:padding="30px">
+
+            <TextView
+                android:id="@+id/LblCNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:text="@string/CNumber" />
+
+            <EditText
+                android:id="@+id/TxtNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.41"
+                android:ems="10"
+                android:inputType="text" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:layout_marginTop="50dp"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:padding="30px">
+
+            <TextView
+                android:id="@+id/LblCPostcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:text="@string/CPostcode" />
+
+            <EditText
+                android:id="@+id/TxtPostcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.41"
+                android:ems="10"
+                android:inputType="text" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:layout_marginTop="50dp"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:padding="30px">
+
+            <TextView
+                android:id="@+id/LblCCity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:text="@string/CCity" />
+
+            <EditText
+                android:id="@+id/TxtCity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.41"
+                android:ems="10"
+                android:inputType="text" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:layout_marginTop="50dp"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:padding="30px">
+            <TextView
+                android:id="@+id/LblUserCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:text="@string/CUserCount" />
+
+            <Spinner
+                android:id="@+id/UserCount_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:layout_marginTop="50dp"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:padding="30px">
+            <TextView
+                android:id="@+id/LblDatePicker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:text="@string/CDatePicker" />
+
+            <DatePicker
+                android:id="@+id/dialog_date_datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:spinnersShown="true">
+            </DatePicker>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:layout_marginTop="50dp"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:padding="30px">
+            <TextView
+                android:id="@+id/LblTimepicker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:text="@string/CTimePicker" />
+
+            <TimePicker
+                android:id="@+id/dialog_time_timePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                android:spinnersShown="true">
+            </TimePicker>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:layout_marginTop="50dp"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:padding="30px">
+            <TextView
+                android:id="@+id/LblComment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:text="@string/CComment" />
+
+            <EditText
+                android:inputType="textMultiLine"
+            android:lines="8"
+            android:minLines="6"
+            android:gravity="top|left"
+            android:maxLines="10"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+                android:layout_weight=".50"
+            android:scrollbars="vertical"
+            />
+        </LinearLayout>
+        <Button
+            android:id="@+id/BtnPushEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:onClick="CreateEventClick"
+            android:text="@string/Ccreate"
+           />
+
+    </LinearLayout>
+   </android.support.v4.widget.NestedScrollView>
+</FrameLayout>

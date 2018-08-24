@@ -1,0 +1,11 @@
+C:\Users\Anthony\Desktop\BBQAPP\BbqApi\Bbq.Data\bin\Debug\netcoreapp2.0\Bbq.Data.deps.json
+C:\Users\Anthony\Desktop\BBQAPP\BbqApi\Bbq.Data\bin\Debug\netcoreapp2.0\Bbq.Data.dll
+C:\Users\Anthony\Desktop\BBQAPP\BbqApi\Bbq.Data\bin\Debug\netcoreapp2.0\Bbq.Data.pdb
+C:\Users\Anthony\Desktop\BBQAPP\BbqApi\Bbq.Data\obj\Debug\netcoreapp2.0\Bbq.Data.csprojResolveAssemblyReference.cache
+C:\Users\Anthony\Desktop\BBQAPP\BbqApi\Bbq.Data\obj\Debug\netcoreapp2.0\Bbq.Data.csproj.CoreCompileInputs.cache
+C:\Users\Anthony\Desktop\BBQAPP\BbqApi\Bbq.Data\obj\Debug\netcoreapp2.0\Bbq.Data.AssemblyInfoInputs.cache
+C:\Users\Anthony\Desktop\BBQAPP\BbqApi\Bbq.Data\obj\Debug\netcoreapp2.0\Bbq.Data.AssemblyInfo.cs
+C:\Users\Anthony\Desktop\BBQAPP\BbqApi\Bbq.Data\obj\Debug\netcoreapp2.0\Bbq.Data.dll
+C:\Users\Anthony\Desktop\BBQAPP\BbqApi\Bbq.Data\obj\Debug\netcoreapp2.0\Bbq.Data.pdb
+C:\Users\Anthony\Desktop\BBQAPP\BbqApi\Bbq.Data\bin\Debug\netcoreapp2.0\Newtonsoft.Json.dll
+C:\Users\Anthony\Desktop\BBQAPP\BbqApi\Bbq.Data\bin\Debug\netcoreapp2.0\Newtonsoft.Json.xml
