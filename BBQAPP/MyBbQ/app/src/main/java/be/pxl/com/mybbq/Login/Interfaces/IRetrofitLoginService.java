@@ -9,8 +9,6 @@ import retrofit2.http.Query;
 
 public interface IRetrofitLoginService {
     @POST("User/getUser")
-   // Call<User> getUser(@Body User user);
     Call<ResponseBody> getUser(@Body User user);
 
-   // Call<ResponseBody> findUser(@Query("username") String username, @Query("password") String password);
 }

@@ -89,13 +89,6 @@
                 android:onClick="loginClick"
                 android:text="@string/Login" />
 
-            <Button
-                android:id="@+id/BtnLoginOther"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:onClick="loginClickOther"
-                android:text="@string/LoginOther" />
         </LinearLayout>
 
     </LinearLayout>

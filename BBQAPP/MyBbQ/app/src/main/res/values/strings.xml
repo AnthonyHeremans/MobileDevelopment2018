@@ -24,6 +24,16 @@
     <string name="CTimePicker">Kies een Starttijd :</string>
     <string name="CComment">Voeg een opmerking toe :</string>
     <string name="Ccreate">Maak het event aan!</string>
+    <string name="QrString">This is the view for QR</string>
+
+
+    <string name="meat">Niet Vegetarisch</string>
+    <string name="noMeat">Vegetarisch</string>
+    <string name="alchohol">Alchohol</string>
+    <string name="noAlchohol">Geen Alchohol</string>
+    <string name="sleep">Blijven Slapen</string>
+    <string name="noSleep">Niet Blijven Slapen</string>
+
 
     <string-array name="userCountArray">
         <item>1</item>

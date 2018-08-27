@@ -11,9 +11,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import be.pxl.com.mybbq.CreateEvent.CreateEventFragment;
+import be.pxl.com.mybbq.MyEvents.Interfaces.IMyEventService;
+import be.pxl.com.mybbq.MyEvents.Services.MyEventService;
+import be.pxl.com.mybbq.Newsfeed.Services.NewsfeedService;
 import be.pxl.com.mybbq.R;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -22,8 +28,13 @@ import butterknife.OnClick;
  */
 public class MyEventsFragment extends Fragment {
 
+    @BindView(R.id.lstMyList)
+    ListView list;
+
     private FragmentActivity myContext;
     private View view;
+
+    private IMyEventService myEventService;
 
     public MyEventsFragment() {
         // Required empty public constructor
@@ -42,6 +53,17 @@ public class MyEventsFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_my_events, container, false);
         ButterKnife.bind(this, view);
         myContext = (FragmentActivity) getActivity();
+
+        try {
+            myContext = (FragmentActivity) getActivity();
+            this.myEventService = new MyEventService(myContext);
+            myEventService.callNewsfeedMessageService((FragmentActivity)getActivity(), list);
+
+        } catch (Exception e) {
+            int duration = Toast.LENGTH_LONG;
+            Toast toast = Toast.makeText(getActivity(),e.toString(), duration);
+            toast.show();
+        }
         return view;
     }
 
@@ -52,12 +74,8 @@ public class MyEventsFragment extends Fragment {
 
     private void initFragment(Fragment toload, String tag, String title){
         myContext.setTitle(title);
-
         FragmentTransaction fragmentTransaction = myContext.getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fram, toload, tag);
         fragmentTransaction.commit();
-//        AppCompatActivity activity = (AppCompatActivity) view.getContext();
-//        Fragment myFragment = new CreateEventFragment();
-//        activity.getSupportFragmentManager().beginTransaction().replace(R.id.fram, myFragment).addToBackStack(null).commit();
     }
 }

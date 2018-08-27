@@ -5270,11 +5270,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anthony\\Desktop\\BBQAPP\\BbqApi\\Bbq.Data\\Bbq.Data.csproj",
+      "projectUniqueName": "D:\\GithubRepos\\MobileDevelopment2018\\BBQAPP\\BbqApi\\Bbq.Data\\Bbq.Data.csproj",
       "projectName": "Bbq.Data",
-      "projectPath": "C:\\Users\\Anthony\\Desktop\\BBQAPP\\BbqApi\\Bbq.Data\\Bbq.Data.csproj",
+      "projectPath": "D:\\GithubRepos\\MobileDevelopment2018\\BBQAPP\\BbqApi\\Bbq.Data\\Bbq.Data.csproj",
       "packagesPath": "C:\\Users\\Anthony\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anthony\\Desktop\\BBQAPP\\BbqApi\\Bbq.Data\\obj\\",
+      "outputPath": "D:\\GithubRepos\\MobileDevelopment2018\\BBQAPP\\BbqApi\\Bbq.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",

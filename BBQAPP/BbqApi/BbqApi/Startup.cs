@@ -36,6 +36,7 @@ namespace BbqApi
             });
             // Services
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IEventRepository, EventRepository>();
             services.AddMvc();
 
         }

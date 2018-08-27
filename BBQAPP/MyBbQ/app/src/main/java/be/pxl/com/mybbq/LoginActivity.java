@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import be.pxl.com.mybbq.Global.GlobalUser;
 import be.pxl.com.mybbq.Login.Interfaces.ILoginService;
 import be.pxl.com.mybbq.Login.Services.LoginService;
 import butterknife.BindView;
@@ -22,15 +23,17 @@ public class LoginActivity extends AppCompatActivity {
 
     private ILoginService loginService;
 
+    //singleton
+    private GlobalUser globalUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
+        setGlobalUser(GlobalUser.getInstance());
         this.loginService = new LoginService(getApplicationContext());
-        //this.loginService.setContext(getApplicationContext());
-
     }
 
     public void loginClick(View view) {
@@ -38,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         String username = loginField.getText().toString();
         String password = passwordField.getText().toString();
         if (!username.trim().equals("") && !password.trim().equals("")) {
+            globalUser.setUserName(username);
             login(username, password);
         } else {
             Context context = getApplicationContext();
@@ -48,20 +52,11 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
     public void login(String username, String password) {
-       // ILoginService loginService = new LoginService();
         loginService.callLoginService(username, password, getApplicationContext());
-        //Check if user exsist in API
-//        Intent startHomeActivity = new Intent(getApplicationContext(), MainActivity.class);
-//        startHomeActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//        getApplicationContext().startActivity(startHomeActivity);
-//        Intent intent = new Intent(LoginActivity.this,
-//                MainActivity.class);
-//        startActivity(intent);
     }
 
-    public void loginClickOther(View view) {
-
+    public void setGlobalUser(GlobalUser globalUser) {
+        this.globalUser = globalUser;
     }
-
 
 }

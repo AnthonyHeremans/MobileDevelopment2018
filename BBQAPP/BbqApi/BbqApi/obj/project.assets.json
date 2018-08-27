@@ -13714,11 +13714,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anthony\\Desktop\\BBQAPP\\BbqApi\\BbqApi\\BbqApi.csproj",
+      "projectUniqueName": "D:\\GithubRepos\\MobileDevelopment2018\\BBQAPP\\BbqApi\\BbqApi\\BbqApi.csproj",
       "projectName": "BbqApi",
-      "projectPath": "C:\\Users\\Anthony\\Desktop\\BBQAPP\\BbqApi\\BbqApi\\BbqApi.csproj",
+      "projectPath": "D:\\GithubRepos\\MobileDevelopment2018\\BBQAPP\\BbqApi\\BbqApi\\BbqApi.csproj",
       "packagesPath": "C:\\Users\\Anthony\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anthony\\Desktop\\BBQAPP\\BbqApi\\BbqApi\\obj\\",
+      "outputPath": "D:\\GithubRepos\\MobileDevelopment2018\\BBQAPP\\BbqApi\\BbqApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -13739,8 +13739,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\Anthony\\Desktop\\BBQAPP\\BbqApi\\Bbq.Data\\Bbq.Data.csproj": {
-              "projectPath": "C:\\Users\\Anthony\\Desktop\\BBQAPP\\BbqApi\\Bbq.Data\\Bbq.Data.csproj"
+            "D:\\GithubRepos\\MobileDevelopment2018\\BBQAPP\\BbqApi\\Bbq.Data\\Bbq.Data.csproj": {
+              "projectPath": "D:\\GithubRepos\\MobileDevelopment2018\\BBQAPP\\BbqApi\\Bbq.Data\\Bbq.Data.csproj"
             }
           }
         }

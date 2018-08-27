@@ -221,17 +221,67 @@
                 android:text="@string/CComment" />
 
             <EditText
+                android:id="@+id/CComment"
                 android:inputType="textMultiLine"
-            android:lines="8"
-            android:minLines="6"
-            android:gravity="top|left"
-            android:maxLines="10"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
+                android:lines="8"
+                android:minLines="6"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight=".50"
-            android:scrollbars="vertical"
+                android:scrollbars="vertical"
             />
         </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:layout_marginTop="50dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:padding="30px">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:weightSum="1"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp">
+
+                <CheckBox android:id="@+id/checkbox_meat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/meat"
+                    android:onClick="onCheckboxClicked"/>
+                <CheckBox android:id="@+id/checkbox_no_meat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/noMeat"
+                    android:onClick="onCheckboxClicked"/>
+                <CheckBox android:id="@+id/checkbox_alchohol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alchohol"
+                    android:onClick="onCheckboxClicked"/>
+                <CheckBox android:id="@+id/checkbox_no_alchohol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/noAlchohol"
+                    android:onClick="onCheckboxClicked"/>
+                <CheckBox android:id="@+id/checkbox_sleep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sleep"
+                    android:onClick="onCheckboxClicked"/>
+                <CheckBox android:id="@+id/checkbox_no_sleep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/noSleep"
+                    android:onClick="onCheckboxClicked"/>
+        </LinearLayout>
+    </LinearLayout>
         <Button
             android:id="@+id/BtnPushEvent"
             android:layout_width="wrap_content"

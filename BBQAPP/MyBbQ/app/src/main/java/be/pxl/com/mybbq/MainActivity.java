@@ -1,5 +1,6 @@
 package be.pxl.com.mybbq;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,6 +18,7 @@ import android.view.MenuItem;
 
 import be.pxl.com.mybbq.MyEvents.MyEventsFragment;
 import be.pxl.com.mybbq.Newsfeed.NewsfeedFragment;
+import be.pxl.com.mybbq.QREventList.EventsIGoTOFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -35,15 +37,6 @@ public class MainActivity extends AppCompatActivity
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -57,12 +50,6 @@ public class MainActivity extends AppCompatActivity
     private void initFragment(Fragment toload, String tag, String title){
         setTitle(title);
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-
-//        Bundle userIdBundle = new Bundle();
-//        String email = Token.getInstance().getEmail();
-//        userIdBundle.putString("emailUser",email);
-//        toload.setArguments(userIdBundle);
-
         fragmentTransaction.replace(R.id.fram, toload, tag);
         fragmentTransaction.commit();
     }
@@ -78,7 +65,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
@@ -102,16 +88,15 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-
         switch(item.getItemId()){
             case R.id.nav_newsfeed: initFragment(new NewsfeedFragment(),"NewsfeedService","Newsfeed"); break;
             case R.id.nav_events: initFragment(new MyEventsFragment(),"EventService","Mijn Events"); break;
-            case R.id.nav_qr: initFragment(new MyEventsFragment(),"NewsfeedService","Newsfeed1"); break;
-            case R.id.nav_profiel: initFragment(new MyEventsFragment(),"NewsfeedService","Newsfeed2"); break;
-            case R.id.nav_settings: initFragment(new MyEventsFragment(),"NewsfeedService","Newsfeed3"); break;
-            case R.id.nav_logout: initFragment(new MyEventsFragment(),"NewsfeedService","Newsfeed4"); break;
+            case R.id.nav_qr: initFragment(new EventsIGoTOFragment(),"EventsIGoTo","Events waar ik naar toe ga"); break;
+            case R.id.nav_logout:
+                Intent startLoginActivity = new Intent(getApplicationContext(), LoginActivity.class);
+                startLoginActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getApplicationContext().startActivity(startLoginActivity); break;
         }
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

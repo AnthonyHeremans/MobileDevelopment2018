@@ -59,7 +59,6 @@ public class LoginService implements ILoginService {
                 }
                 else
                 {
-
                     int duration = Toast.LENGTH_SHORT;
                     Toast toast = Toast.makeText(context,"Incorrect login Details", duration);
                     toast.show();
@@ -81,8 +80,6 @@ public class LoginService implements ILoginService {
                     toast.show();
                 }
             }
-
-
         });
     }
 
