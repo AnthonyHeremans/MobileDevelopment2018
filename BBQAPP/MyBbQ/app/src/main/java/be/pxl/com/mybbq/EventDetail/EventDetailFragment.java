@@ -108,7 +108,6 @@ public class EventDetailFragment extends Fragment {
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId = db.insert(FeedDatabase.FeedEntry.TABLE_NAME, null, values);
-        Toast.makeText(getContext(), "The time is " + newRowId , Toast.LENGTH_LONG).show();
     }
 
 

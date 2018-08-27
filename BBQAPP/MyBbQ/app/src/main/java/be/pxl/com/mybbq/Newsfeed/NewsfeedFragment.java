@@ -27,8 +27,7 @@ public class NewsfeedFragment extends Fragment {
 
     @BindView(R.id.lstNewsfeed)
     ListView list;
-    @BindView(R.id.filterNewsfeed)
-    FloatingActionButton fab;
+
     private FragmentActivity myContext;
     private INewsfeedService newsfeedService;
 
@@ -44,13 +43,6 @@ public class NewsfeedFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_newsfeed, container, false);
         ButterKnife.bind(this, view);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         try {
             myContext = (FragmentActivity) getActivity();
             this.newsfeedService = new NewsfeedService(myContext);

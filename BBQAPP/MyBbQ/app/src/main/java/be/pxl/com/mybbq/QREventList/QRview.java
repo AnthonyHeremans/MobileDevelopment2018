@@ -47,8 +47,6 @@ public class QRview extends Fragment {
 
         Bundle bundle = getArguments();
         EventClass myObject = new EventClass();
-        //View parent = (View)view.getParent();
-        //int width = parent.getWidth();
         int width = 1080;
         String jsonString = bundle.getString("eventObject");
         if (jsonString != null)
@@ -56,7 +54,6 @@ public class QRview extends Fragment {
             myObject = new Gson().fromJson(jsonString, EventClass.class);
 
         }
-        //ImageView imageView = (ImageView) findViewById(R.id.imgQr);
         try {
             Bitmap bitmap = encodeAsBitmap(jsonString, width);
             QrPicture.setImageBitmap(bitmap);
@@ -66,7 +63,8 @@ public class QRview extends Fragment {
 
         return view;
     }
-    Bitmap encodeAsBitmap(String str,int width) throws WriterException {
+
+     private Bitmap encodeAsBitmap(String str,int width) throws WriterException {
         BitMatrix result;
 
         try {

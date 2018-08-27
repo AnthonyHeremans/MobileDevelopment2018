@@ -114,9 +114,7 @@ public class EventsIGoTOFragment extends Fragment {
         List<EventClass> revList = reverseList(myObjectList);
         myContext = (FragmentActivity) getActivity();
         proceed(revList, myContext,list);
-        for(int l=0; l<=myObjectList.size(); l++) {
-            Toast.makeText(getContext(), "The time is " + myObjectList.get(1).getFilters(), Toast.LENGTH_LONG).show();
-        }
+
         return view;
     }
     private void proceed(final List<EventClass> newsfeedMessageListRes, final Activity context, ListView lst)
@@ -130,10 +128,6 @@ public class EventsIGoTOFragment extends Fragment {
         lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                int duration = Toast.LENGTH_SHORT;
-                Toast toast = Toast.makeText(context,"OnClickWorks", duration);
-                toast.show();
 
                 FragmentTransaction transaction = ((FragmentActivity)context).getSupportFragmentManager().beginTransaction();
                 android.support.v4.app.Fragment mfragment = new QRview();

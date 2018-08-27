@@ -56,10 +56,6 @@ public class NewsfeedService implements INewsfeedService {
         this.context = context;
     }
 
-//    @Override
-//    public void onActivityCreated(Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//    }
     @Override
     public void callNewsfeedMessageService(final Activity context, final ListView lst) {
         Call<List<EventClass>> newsfeedCall = newsfeedService.getAllNewsfeeds();
@@ -69,7 +65,7 @@ public class NewsfeedService implements INewsfeedService {
                 if (response.isSuccessful()) {
                     List<EventClass> newsfeedMessageListRes = response.body();
                     List<EventClass> reverseList = reverseList(newsfeedMessageListRes);
-                   // newsfeedWrapper.setNewsfeedMessageList(reverseList);
+
                     proceed(reverseList, context, lst);
                 } else {
                     int duration = Toast.LENGTH_SHORT;
@@ -104,30 +100,23 @@ public class NewsfeedService implements INewsfeedService {
         lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                int duration = Toast.LENGTH_SHORT;
-                Toast toast = Toast.makeText(context,"OnClickWorks", duration);
-                toast.show();
-
                 FragmentTransaction transaction = ((FragmentActivity)context).getSupportFragmentManager().beginTransaction();
-               android.support.v4.app.Fragment mfragment = new EventDetailFragment();
+                android.support.v4.app.Fragment mfragment = new EventDetailFragment();
                     EventClass newsObj = newsfeedMessageListRes.get(position);
                     Bundle bundle = new Bundle();
 
                     Gson gson = new Gson();
-                    // 2. Java object to JSON, and assign to a String
-                     String jsonInString = gson.toJson(newsObj);
-                  bundle.putString("eventObject",jsonInString);
-//                bundle.putLong("Date",newsObj.getTimestamp());
-//                bundle.putString("Admin",newsObj.getName());
-//                bundle.putString("longMessage", newsObj.getFullDescription());
-//
+
+                    String jsonInString = gson.toJson(newsObj);
+                    bundle.putString("eventObject",jsonInString);
+
                mfragment.setArguments(bundle);
                transaction.replace(R.id.fram, mfragment);
                transaction.commit();
             }
         });
     }
+
     public List<EventClass> reverseList(List<EventClass> list) {
         List<EventClass> revertedList = new ArrayList<>();
         int size = list.size() - 1;

@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+
         switch(item.getItemId()){
             case R.id.nav_newsfeed: initFragment(new NewsfeedFragment(),"NewsfeedService","Newsfeed"); break;
             case R.id.nav_events: initFragment(new MyEventsFragment(),"EventService","Mijn Events"); break;

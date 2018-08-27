@@ -28,7 +28,6 @@ public class CustomListViewMyEvent  extends ArrayAdapter<String> {
     private Activity context;
 
     public CustomListViewMyEvent(Activity context, String[] title, List<myEventClass> eventClassList){
-        //check dit na!
         super(context, R.layout.fragment_custom_event_list_layout, title);
 
         date = new String[eventClassList.size()];

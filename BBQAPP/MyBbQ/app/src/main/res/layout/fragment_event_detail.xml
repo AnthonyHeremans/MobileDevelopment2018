@@ -84,7 +84,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".25"
-                android:text="@string/CPostcode" />
+                android:text="Stad :" />
 
             <TextView
                 android:id="@+id/LblPostalCodeString"
@@ -134,7 +134,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".25"
-                android:text="@string/CUserCount" />
+                android:text="Datum en tijd :" />
 
             <TextView
                 android:id="@+id/LblDateString"
@@ -162,7 +162,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".25"
-                android:text="@string/CComment" />
+                android:text="Verdere uitleg :" />
 
             <TextView
                 android:id="@+id/LblCommentString"
@@ -190,7 +190,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".25"
-                android:text="@string/CComment" />
+                android:text="Filters : " />
             <TextView
                 android:id="@+id/lblFilterString"
                 android:layout_width="0dp"
